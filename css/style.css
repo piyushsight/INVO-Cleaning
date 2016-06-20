@@ -37,8 +37,7 @@ body{font-size: 17px;}
     box-shadow: 0 0 5px #DDD inset; 
     color: #666; 
     outline: none; 
-    height:28px; 
-    //width: 275px; 
+    height:28px;
 	margin-bottom:2px;
 	padding-top:2px;
 	padding-bottom:2px;
@@ -56,19 +55,43 @@ body{font-size: 17px;}
 	margin: 0 auto;
 	text-align: center;
 }
+.service{margin:0px; padding:0px;}
+.comment{margin:45px 0px; padding:0px;}
+.comment-by{
+	font-size:80%;
+	text-align:center;
+}
+.summer-discount-text{color:#fff; font-weight:700;}
 
-
+@media (min-width: 992px){
+.summer-discount-text{
+    text-align:right;
+}
+#call-now{
+     margin: 0 auto;
+}
+}
+.web{display:block;}
+.mobile{display:none;}
+@media (max-width: 992px){
+.web{display:none;}
+.mobile{display:block;}
+.comment{margin:0px 0px 20px 0; padding:0px;}
+.comment-by{text-align:left;}
+.footer-buttons{margin-bottom:10px;}
+}
 /* Bubble with an isoceles triangle
 ------------------------------------------ */
 
 .triangle-isosceles {
   position: relative;
   padding: 3px;
-  margin: 0em 0 3em;
+  margin: 0em 0 1em;
   color: #fff;
   background: #f3961c;
   border-radius: 2px;
   background: linear-gradient(top, #f9d835, #f3961c);
+  font-size:90%;
 }
 
 /* creates triangle */

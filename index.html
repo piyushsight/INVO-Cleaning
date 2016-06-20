@@ -4,19 +4,21 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>INVO</title>
+	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="row">
 		<div class="panel" style="margin-bottom:0px;">
-			<div class="panel-body theme-color">
-				<div class="col-sm-12 col-md-2">
-					<img src="images/profile.png" class="pull-center profile" height="120px" >
+			<div class="panel-body theme-color" style="padding:5px;">
+				<div class="col-sm-12 col-md-3">
+					<img src="images/profile.png" class="pull-center profile" height="118px" >
+					<img src="images/logo.png" class="pull-center profile" style="margin-left:20px;">
 				</div>
-				<div class="col-sm-0 col-md-7"></div>
-				<div class="col-sm-12 col-md-3 vertical-center">
-					<div class="panel panel-default pull-center" style="font-size:25px; color:#1e5799">
+				<div class="col-sm-0 col-md-5"></div>
+				<div class="col-sm-12 col-md-4 vertical-center">
+					<div class="panel panel-default pull-center" id="call-now" style="font-size:25px; color:#1e5799; max-width: 380px;">
 						<span style="color:#3c763d">Call Now </span>&nbsp;1800-676-INVO
 					</div>
 				</div>
@@ -27,12 +29,11 @@
 
 	<div class="row">
 		<div class="panel theme-gradient" style="margin-bottom:10px;">
-			<div class="panel-body">
-				<div class="col-md-3"></div>
-				<div class="col-sm-12 col-md-4" style="color:#fff; font-weight:700; align:center;">
+			<div id="discount-box" class="panel-body" style="padding:10px">
+				<div class="col-sm-12 col-md-6 summer-discount-text">
 					Subscribe now to get 20% Summer Discount! 
 				</div>
-				<div class="col-md-5 col-sm-12">
+				<div id="discount-box-email" class="col-md-6 col-sm-12">
 					<form action="" onsubmit="return false">
 						<div class="input-group" style="max-width:400px;">
 							<input id="email" type="email" name="email" class="form-control input-md" pattern="[^ @]*@[^ @]*" placeholder="Enter your email" required>
@@ -48,25 +49,43 @@
 
 	<div class="row">
 		<div class="col-sm-6 col-md-2">
-			<div class="panel theme-border">
-				<div class="panel-body">
-					<div class="btn btn-primary btn-block cursor-text">Residence Cleaning</div>
-					<br>
-					<img src="images/1.png" width="100%" alt="">
+			<div class="col-sm-12 col-md-12 service">
+				<div class="panel theme-border">
+					<div class="panel-body">
+						<div class="btn btn-primary btn-block cursor-text">Residence Cleaning</div>
+						<br>
+						<img src="images/1.png" width="100%" alt="">
+					</div>
 				</div>
+			</div>
+			<div class="col-md-12 col-sm-12 comment">
+				<div class="panel triangle-isosceles">
+					INVO cleaning is very reliable. Owner is veteran and resident of South Bend.
+				</div>
+				<div class="comment-by">Chris Sheehan</div>
 			</div>
 		</div>
 		<div class="col-sm-6 col-md-2">
-			<div class="panel theme-border">
-				<div class="panel-body">
-					<div class="btn btn-primary btn-block cursor-text">Office Cleaning</div>
-					<br>
-					<img src="images/2.png" width="100%" alt="">
+			<div class="col-sm-12 col-md-12 service">
+				<div class="panel theme-border">
+					<div class="panel-body">
+						<div class="btn btn-primary btn-block cursor-text">Office Cleaning</div>
+						<br>
+						<img src="images/2.png" width="100%" alt="">
+					</div>
 				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 comment">
+				<div class="panel triangle-isosceles">
+					We needed a reliable company that can take care of all our needs. I definitely recommend invo.
+				</div>
+				<div class="comment-by">Tim Knight</div>
 			</div>
 		</div>
 
-		<div class="col-md-4 col-sm-12">
+		<div class="col-sm-12 mobile"></div>
+		
+		<div class="col-md-4 web">
 			<div class="panel panel-primary">
 				<div class="panel-body request-estimate">
 					<div class="btn btn-block cursor-text theme-gradient-2" style="font-weight:600; color">Request An Estimate</div>
@@ -115,70 +134,138 @@
 					</form>
 				</div>
 			</div>
+		
+			<div class="col-sm-12 col-md-12">
+				<div class="panel" style="margin-bottom:5px;">
+					<div class="center">
+						<div class="btn btn-primary btn-block"><strong>Affiliations</strong></div>
+					</div>
+				</div>
+				<div class="panel row">
+					<div class="col-sm-6">
+						<img src="images/Affiliations1.png" alt="" width="80%">
+					</div>
+					<div class="col-sm-6">
+						<img src="images/Affiliations2.png" alt="" width="80%">
+					</div>
+				</div>
+			</div>
+		
 		</div>
 
 		<div class="col-sm-6 col-md-2">
-			<div class="panel theme-border">
-				<div class="panel-body">
-					<div class="btn btn-primary btn-block cursor-text">Construction Cleaning</div>
-					<br>
-					<img src="images/3.png" width="100%" alt="">
+			<div class="col-sm-12 col-md-12 service">
+				<div class="panel theme-border">
+					<div class="panel-body">
+						<div class="btn btn-primary btn-block cursor-text">Construction Cleaning</div>
+						<br>
+						<img src="images/3.png" width="100%" alt="">
+					</div>
 				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 comment">
+				<div class="panel triangle-isosceles">
+					3 years of relationship with Wally and his team. No complains.
+				</div>
+				<div class="comment-by">Gregflyn</div>
 			</div>
 		</div>
 		
 		<div class="col-sm-6 col-md-2">
-			<div class="panel theme-border">
-				<div class="panel-body">
-					<div class="btn btn-primary btn-block cursor-text">Window Cleaning</div>
-					<br>
-					<img src="images/4.png" width="100%" alt="">
+			<div class="col-sm-12 col-md-12 service">
+				<div class="panel theme-border">
+					<div class="panel-body">
+						<div class="btn btn-primary btn-block cursor-text">Window Cleaning</div>
+						<br>
+						<img src="images/4.png" width="100%" alt="">
+					</div>
 				</div>
 			</div>
+			<div class="col-sm-12 col-md-12 comment">
+				<div class="panel triangle-isosceles">
+					My windows are always clean with INVO monthly subscription.
+				</div>
+				<div class="comment-by">Thom Kenny</div>
+			</div>
+		</div>
+	
+		<div class="col-sm-12 mobile">
+			<div class="panel panel-primary">
+				<div class="panel-body request-estimate">
+					<div class="btn btn-block cursor-text theme-gradient-2" style="font-weight:600; color">Request An Estimate</div>
+					<!-- <br /> -->
+					<!-- <div class="pull-center small-text">Complete the form to get your free estimate</div> -->
+					<form action="" onsubmit="return false;">
+						<div class="form-group">
+							<div class="col-sm-6">
+								<input type="text" name="first-name" value="" id="first-name" placeholder="First Name" class="form-control" required>
+							</div>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" name="last-name" id="last-name" value="" placeholder="Last Name"required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input type="text" class="form-control" name="address" id="address" value="" placeholder="Address" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-5">
+								<input type="text" class="form-control" name="city" id="city" value="" placeholder="city" required>
+							</div>
+							<div class="col-sm-3">
+								<select name="code" id="code">
+									<option value="ST"> ST</option>
+								</select>
+							</div>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="zip-code" id="zip-code" value="" placeholder="Zip" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-6">
+								<input type="email" class="form-control" name="email2" id="email2" value="" placeholder="Email" required>
+							</div>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" name="phone" id="phone" value="" placeholder="Phone" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input type="submit" class="btn btn-primary btn-block" onclick="submit_request()"  value="Get Your Estimate" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		
+			<div class="col-sm-12 col-md-12">
+				<div class="panel" style="margin-bottom:5px;">
+					<div class="center">
+						<div class="btn btn-primary btn-block"><strong>Affiliations</strong></div>
+					</div>
+				</div>
+				<div class="panel row">
+					<div class="col-sm-6">
+						<img src="images/Affiliations1.png" alt="" width="80%">
+					</div>
+					<div class="col-sm-6">
+						<img src="images/Affiliations2.png" alt="" width="80%">
+					</div>
+				</div>
+			</div>
+		
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-md-2 col-sm-6">
-			<div class="panel triangle-isosceles">
-				INVO cleaning is very reliable. Owner is veteran and resident of South Bend.
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-2">
-			<div class="panel triangle-isosceles">
-				We needed a reliable company that can take care of all our needs. I definitely recommend invo.
-			</div>
-		</div>
-
-		<div class="col-sm-12 col-md-4">
-			<div class="panel" style="margin-bottom:5px;">
-				<div class="center">
-					<div class="btn btn-primary btn-block"><strong>Affiliations</strong></div>
-				</div>
-			</div>
-			<div class="panel row">
-				<div class="col-sm-6">
-					<img src="images/Affiliations1.png" alt="">
-				</div>
-				<div class="col-sm-6">
-					<img src="images/Affiliations2.png" alt="">
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-6 col-md-2">
-			<div class="panel triangle-isosceles">
-				3 years of relationship with Wally and his team. No complains.
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-2">
-			<div class="panel triangle-isosceles">
-				My windows are always clean with INVO monthly subscription.
-			</div>
-		</div>
-
+	<div class="row" style="color:#fff; font-weight:700;">
+		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Carpet Cleaning</div></div>
+		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Floor Buffering</div></div>
+		<div class="col-sm-12 col-md-4 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Upholstery Cleaning</div></div>
+		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Speciality Cleaning</div></div>
+		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Additional Services</div></div>
 	</div>
-</body>
+	</body>
 </html>
 
 <!-- Modal -->
@@ -192,7 +279,7 @@
         <h4 class="modal-title">Thank You</h4>
       </div>
       <div class="modal-body">
-        <p>Thank you for your request, we will contact you soon.</p>
+        <p>One of our representatives will contact you shortly to discuss your unique cleaning needs</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
@@ -261,7 +348,9 @@ function subscribe() {
 		type: 'post',
 		data: {email: email},
 		success: function(response) {
-			$("#subscribe-modal").modal("show");
+			$("#discount-box").html('<div class="col-sm-12 col-md-12 summer-discount-text" style="text-align:center;">Congratulations you just earned 20% discount, we will contact you shortly!</div>')
+			$("#discount-box-email").hide();
+			//$("#subscribe-modal").modal("show");
 		}
 	});
 }
