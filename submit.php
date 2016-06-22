@@ -16,7 +16,7 @@ $html = "<style type='text/css'>.table th{font-style:bold; width:70px;}</style>H
 $mail = new PHPMailer();
 
 	// ---------- adjust these lines ---------------------------------------
-	$mail->Username = "webiterators@gmail.com"; // your GMail user name
+	$mail->Username = "temporaryid.hcl@gmail.com"; // your GMail user name
 	$mail->Password = "rememberpassword"; 
 	$mail->AddAddress("abhatnag@nd.edu"); // recipients email
 	$mail->FromName = $first_name." ".$last_name; // readable name

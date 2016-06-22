@@ -6,17 +6,18 @@
 	<title>INVO</title>
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="row">
 		<div class="panel" style="margin-bottom:0px;">
 			<div class="panel-body theme-color" style="padding:5px;">
-				<div class="col-sm-12 col-md-3">
+				<div class="col-sm-12 col-md-4">
 					<img src="images/profile.png" class="pull-center profile" height="118px" >
 					<img src="images/logo.png" class="pull-center profile" style="margin-left:20px;">
 				</div>
-				<div class="col-sm-0 col-md-5"></div>
+				<div class="col-sm-0 col-md-4"></div>
 				<div class="col-sm-12 col-md-4 vertical-center">
 					<div class="panel panel-default pull-center" id="call-now" style="font-size:25px; color:#1e5799; max-width: 380px;">
 						<span style="color:#3c763d">Call Now </span>&nbsp;1800-676-INVO
@@ -38,7 +39,7 @@
 						<div class="input-group" style="max-width:400px;">
 							<input id="email" type="email" name="email" class="form-control input-md" pattern="[^ @]*@[^ @]*" placeholder="Enter your email" required>
 							<span class="input-group-btn">
-								<input class="btn btn-primary" type="submit" value="Go" onclick="subscribe();">
+								<input class="btn btn-primary" type="submit" value="Go" onclick="subscribe();" id="spinner1" />
 							</span>
 						</div>
 					</form>
@@ -88,7 +89,7 @@
 		<div class="col-md-4 web">
 			<div class="panel panel-primary">
 				<div class="panel-body request-estimate">
-					<div class="btn btn-block cursor-text theme-gradient-2" style="font-weight:600; color">Request An Estimate</div>
+					<div class="btn btn-block cursor-text theme-gradient-2" style="font-weight:600; color:#fff;">Request An Estimate</div>
 					<!-- <br /> -->
 					<!-- <div class="pull-center small-text">Complete the form to get your free estimate</div> -->
 					<form action="" onsubmit="return false;">
@@ -110,7 +111,7 @@
 								<input type="text" class="form-control" name="city" id="city" value="" placeholder="city" required>
 							</div>
 							<div class="col-sm-3">
-								<select name="code" id="code">
+								<select class="form-control" name="code" id="code">
 									<option value="ST"> ST</option>
 								</select>
 							</div>
@@ -128,7 +129,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="submit" class="btn btn-primary btn-block" onclick="submit_request()"  value="Get Your Estimate" />
+								<input type="submit" class="btn btn-primary btn-block" onclick="submit_request()" id="spinner2" value="Get Your Estimate" />
 							</div>
 						</div>
 					</form>
@@ -198,20 +199,20 @@
 					<form action="" onsubmit="return false;">
 						<div class="form-group">
 							<div class="col-sm-6">
-								<input type="text" name="first-name" value="" id="first-name" placeholder="First Name" class="form-control" required>
+								<input type="text" name="first-name" value="" id="first-name_mobile" placeholder="First Name" class="form-control" required>
 							</div>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" name="last-name" id="last-name" value="" placeholder="Last Name"required>
+								<input type="text" class="form-control" name="last-name" id="last-name_mobile" value="" placeholder="Last Name"required>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="text" class="form-control" name="address" id="address" value="" placeholder="Address" required>
+								<input type="text" class="form-control" name="address" id="address_mobile" value="" placeholder="Address" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-5">
-								<input type="text" class="form-control" name="city" id="city" value="" placeholder="city" required>
+								<input type="text" class="form-control" name="city" id="city_mobile" value="" placeholder="city" required>
 							</div>
 							<div class="col-sm-3">
 								<select name="code" id="code">
@@ -219,20 +220,20 @@
 								</select>
 							</div>
 							<div class="col-sm-4">
-								<input type="text" class="form-control" name="zip-code" id="zip-code" value="" placeholder="Zip" required>
+								<input type="text" class="form-control" name="zip-code" id="zip-code_mobile" value="" placeholder="Zip" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-6">
-								<input type="email" class="form-control" name="email2" id="email2" value="" placeholder="Email" required>
+								<input type="email" class="form-control" name="email2" id="email2_mobile" value="" placeholder="Email" required>
 							</div>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" name="phone" id="phone" value="" placeholder="Phone" required>
+								<input type="text" class="form-control" name="phone" id="phone_mobile" value="" placeholder="Phone" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="submit" class="btn btn-primary btn-block" onclick="submit_request()"  value="Get Your Estimate" />
+								<input type="submit" class="btn btn-primary btn-block" onclick="submit_request_mobile()" id="spinner2_mobile" value="Get Your Estimate" />
 							</div>
 						</div>
 					</form>
@@ -258,12 +259,12 @@
 		</div>
 	</div>
 
-	<div class="row" style="color:#fff; font-weight:700;">
-		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Carpet Cleaning</div></div>
-		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Floor Buffering</div></div>
-		<div class="col-sm-12 col-md-4 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Upholstery Cleaning</div></div>
-		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Speciality Cleaning</div></div>
-		<div class="col-sm-12 col-md-2 footer-buttons"><div class="btn btn-primary btn-block cursor-text">Additional Services</div></div>
+	<div id="footer" class="row" style="color:#fff; font-weight:700; width:100%;">
+		<div class="footer-buttons"><div class="btn btn-primary btn-block cursor-text">Carpet Cleaning</div></div>
+		<div class="footer-buttons"><div class="btn btn-primary btn-block cursor-text">Floor Buffering</div></div>
+		<div class="footer-buttons-lg"><div class="btn btn-primary btn-block cursor-text">Upholstery Cleaning</div></div>
+		<div class="footer-buttons"><div class="btn btn-primary btn-block cursor-text">Speciality Cleaning</div></div>
+		<div class="footer-buttons"><div class="btn btn-primary btn-block cursor-text">Additional Services</div></div>
 	</div>
 	</body>
 </html>
@@ -329,12 +330,39 @@ function submit_request() {
 	if(info.first_name == "" || info.last_name == "" || info.address == "" || info.city == "" || info.zip_code == "" || info.email == "" || info.phone == "" || !validateEmail(info.email))
 		return false;
 	
+	
+	$("#spinner2").val("Requesting...");
 	$.ajax({
 		url: "submit.php",
 		type: 'post',
 		data: {Info: info},
 		success: function(response) {
 			$("#myModal").modal("show");
+			$("#spinner2").val("Request Sent...");
+		}
+	});
+}
+function submit_request_mobile() {
+	var info = new Object();
+	info.first_name = $("#first-name_mobile").val();
+	info.last_name = $("#last-name_mobile").val();
+	info.address = $("#address_mobile").val();
+	info.city = $("#city_mobile").val();
+	info.zip_code = $("#zip-code_mobile").val();
+	info.email = $("#email2_mobile").val();
+	info.phone = $("#phone_mobile").val();
+	if(info.first_name == "" || info.last_name == "" || info.address == "" || info.city == "" || info.zip_code == "" || info.email == "" || info.phone == "" || !validateEmail(info.email))
+		return false;
+	
+	
+	$("#spinner2_mobile").val("Requesting...");
+	$.ajax({
+		url: "submit.php",
+		type: 'post',
+		data: {Info: info},
+		success: function(response) {
+			$("#myModal").modal("show");
+			$("#spinner2_mobile").val("Request Sent...");
 		}
 	});
 }
@@ -343,6 +371,7 @@ function subscribe() {
 	if(email == "" || !validateEmail(email))
 		return false;
 	
+	$("#spinner1").val("Subscribing...");
 	$.ajax({
 		url: "subscribe.php",
 		type: 'post',

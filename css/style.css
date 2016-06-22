@@ -68,17 +68,31 @@ body{font-size: 17px;}
     text-align:right;
 }
 #call-now{
-     margin: 0 auto;
+     margin: 35px auto 0px auto;
 }
 }
 .web{display:block;}
 .mobile{display:none;}
+#footer{position:fixed; bottom:0px;}
+.footer-buttons{
+   width: 16.66666667%;
+   float: left;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+.footer-buttons-lg{
+   width: 33.33333333%;
+   float: left;
+   padding-left: 15px;
+   padding-right: 15px;
+}
 @media (max-width: 992px){
 .web{display:none;}
 .mobile{display:block;}
 .comment{margin:0px 0px 20px 0; padding:0px;}
 .comment-by{text-align:left;}
-.footer-buttons{margin-bottom:10px;}
+#footer{position:relative; bottom:auto;}
+.footer-buttons, .footer-buttons-lg{margin-bottom:10px; width: 100%;}
 }
 /* Bubble with an isoceles triangle
 ------------------------------------------ */
@@ -86,7 +100,7 @@ body{font-size: 17px;}
 .triangle-isosceles {
   position: relative;
   padding: 3px;
-  margin: 0em 0 1em;
+  margin: 0.01em 0 1em;
   color: #fff;
   background: #f3961c;
   border-radius: 2px;
@@ -105,4 +119,44 @@ body{font-size: 17px;}
   border-width: 15px 15px 0;
   border-style: solid;
   border-color: #f3961c transparent;
+}
+
+
+
+
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
 }
